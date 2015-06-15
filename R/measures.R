@@ -613,7 +613,7 @@ gmean = makeMeasure(id = "gmean", minimize = FALSE, best = 1, worst = 0,
 #' @rdname measures
 #' @format none
 measureGMEAN = function(truth, response, negative, positive) {
-  sqrt(measureTP(truth, response, positive) * measureTN(truth, response, negative))
+  sqrt(measureTPR(truth, response, positive) * measureTNR(truth, response, negative))
 }
 
 #' @export gpr
